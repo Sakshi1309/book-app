@@ -10,6 +10,7 @@ import { SearchBooksService } from './search-books.service';
 export class SearchBooksComponent implements OnInit {
 
     bookForm: FormGroup;
+    searchResults: any[];
 
     constructor( private fb: FormBuilder, private searchBooksService: SearchBooksService) {}
 
@@ -25,8 +26,8 @@ export class SearchBooksComponent implements OnInit {
         } else {
             this.searchBooksService.searchBooks(this.bookForm.value.searchBy)
             .subscribe((res) => {
-             let searchResults = res.json();
-             console.log(searchResults);   
+             this.searchResults = res.json().items;
+             console.log(this.searchResults);   
             })
         }
     }

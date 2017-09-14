@@ -1,0 +1,6 @@
+<section *ngIf="bookResults">
+    Display Results 
+    <ul>
+        <li *ngFor="let book of bookResults"><img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" alt="">{{book.volumeInfo.title}}</li>
+    </ul>
+</section>

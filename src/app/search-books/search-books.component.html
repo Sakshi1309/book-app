@@ -4,5 +4,6 @@
     <md-form-field class="example-full-width">
         <input mdInput placeholder="Search for a book" formControlName="searchBy">
     </md-form-field>
-    <input type="submit" value="Search">
+    <button type="submit" md-raised-button color="primary">Search</button>
 </form>
+<search-results [bookResults]="searchResults"></search-results>

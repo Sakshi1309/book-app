@@ -8,22 +8,27 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { SearchBooksComponent } from './search-books/search-books.component';
+import { SearchResultsComponent } from './search-books/search-results.component';
 import { SearchBooksService } from './search-books/search-books.service';
 
 import { MdInputModule } from '@angular/material';
+import { MdButtonModule } from '@angular/material';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBooksComponent
+    SearchBooksComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
     ReactiveFormsModule,
-    MdInputModule
+    MdInputModule,
+    MdButtonModule
   ],
   providers: [
     SearchBooksService
