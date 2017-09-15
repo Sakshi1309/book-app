@@ -1,0 +1,11 @@
+.book-cover__container {
+    text-align: center;
+}
+.book-cover {
+    width: 128px;
+    height: 196px;
+    margin-top: 10px;
+}
+.book-card {
+    width: 318px;
+}

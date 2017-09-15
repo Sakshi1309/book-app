@@ -13,6 +13,10 @@ import { SearchBooksService } from './search-books/search-books.service';
 
 import { MdInputModule } from '@angular/material';
 import { MdButtonModule } from '@angular/material';
+import { MdGridListModule } from '@angular/material';
+import { MdCardModule } from '@angular/material';
+import { MdToolbarModule } from '@angular/material';
+import { MdSidenavModule } from '@angular/material';
 
 
 
@@ -28,7 +32,11 @@ import { MdButtonModule } from '@angular/material';
     HttpModule,
     ReactiveFormsModule,
     MdInputModule,
-    MdButtonModule
+    MdButtonModule,
+    MdGridListModule,
+    MdCardModule,
+    MdToolbarModule,
+    MdSidenavModule
   ],
   providers: [
     SearchBooksService

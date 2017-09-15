@@ -1,6 +1,24 @@
-<section *ngIf="bookResults">
-    Display Results 
-    <ul>
-        <li *ngFor="let book of bookResults"><img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" alt="">{{book.volumeInfo.title}}</li>
-    </ul>
-</section>
+<md-grid-list cols="12" rowHeight="400px">
+    <md-grid-tile
+        *ngFor="let book of bookResults"
+        colspan="4"
+        rowspan="1">
+        <md-card class="book-card" >
+            <md-card-header>
+              <md-card-title>{{book.volumeInfo.title}}</md-card-title>
+              <md-card-subtitle>{{book.volumeInfo.subtitle}}</md-card-subtitle>
+            </md-card-header>
+            <div class="book-cover__container">
+                <img md-card-image class="book-cover" src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="">
+            </div>
+            <!-- <md-card-content>
+              <p >
+                {{book.volumeInfo.description}}
+              </p>
+            </md-card-content>  -->
+            <md-card-actions>
+              <button md-button>Add To My Books</button>
+            </md-card-actions>
+        </md-card>
+    </md-grid-tile>
+</md-grid-list>
